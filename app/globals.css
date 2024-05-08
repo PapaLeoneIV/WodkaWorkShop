@@ -6,25 +6,27 @@
 @tailwind utilities;
 
 html {
+  font-size: 16px; /* Base font size for better readability */
+  display: contents;
   background-color: #323233;
   height: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 body {
   display: flex;
-  flex-direction: column;
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  min-height: 100vh;
-}
-main {
-  flex: 1; /* This will make the main content area grow to occupy any available space */
-  display: flex;
-  flex-direction: column; /* Ensures content inside main is organized vertically */
+  flex-direction: column; /* Stack verticalmente */
 }
 
+/*------------------------------------
+* Header styling
+*-------------------------------------
+*/
+
+
 .header {
+  display: flex; /* Flexbox for horizontal layout */
   background-color: #323233; /* Dark background for the header */
   color: #3f3b3b; /* Light text color */
   padding: 70px 30px; /* Increased padding around the header */
@@ -39,19 +41,14 @@ main {
 }
 
 .header .div {
+  flex: 1; /* Each div takes equal space */
+  text-align: center; 
   list-style: none; /* Removes default list styling */
   padding: 0;
   margin: 0;
   display: flex; /* Flexbox for horizontal layout */
   justify-content: flex-end; /* Align the list items to the right */
   align-items: center; /* Center the list items vertically */
-}
-
-.square_button {
-  /* Additional styles for square_button if necessary */
-  border-radius: 45px;
- background-color: #d35400;
- padding: 40px 80px;
 }
 
 .text_header {
@@ -63,7 +60,7 @@ main {
 }
 
 .text_header :hover {
-  color: #ff0b0b;
+  color: #6d6767;
   text-decoration: double;
   font-style: italic;
   font-size: 24px; /* Larger font size for the header text */
@@ -71,21 +68,36 @@ main {
   margin: 0; /* Remove default margin */
 }
 
-.content {
-  padding: 5px; /* Padding around the content for spacing */
-  background-color: #dc0e0e; /* Light background color for contrast with the header */
-  border-top: 1px solid #7a7a7a; /* A subtle border top for a clean separation */
-  font-family: 'Arial', sans-serif; /* Modern, readable font */
-  font-size: 16px; /* Optimal font size for readability */
-  line-height: 1.6; /* Spacing between lines */
-  color: #333; /* Darker text color for better readability */
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Soft shadow for a subtle depth effect */
-  margin-top: 0px; /* Space between header and content */
-  max-width: 100%; /* Maximum width of the content area */
-  margin-left: 0px; /* Centering the content horizontally */
-  margin-right: 0px; /* Centering the content horizontally */
-  border-radius: 1px; /* Rounded corners for a softer look */
+.search_bar {
+  color: #3f3b3b;
+  padding: 10px 20px; /* Padding around the search bar */
+  border: 1px solid #ccc; /* Light grey border */
+  border-radius: 5px;
+  font-style: italic; /* Rounded corners */
+  font-size: 16px; /* Larger font size for better visibility */
+  margin-right: 10px; /* Space between search bar and button */
 }
+
+.square_button {
+  /* Additional styles for square_button if necessary */
+  border-radius: 45px;
+  background-color: #d35400;
+  padding: 40px 80px;
+  color: #fff;
+  font-size: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+
+
+/*------------------------------------
+* Footer styling
+*-------------------------------------
+*/
+
 
 .footer {
   background-color: #ff0b0b; /* Dark blue background */
@@ -99,6 +111,8 @@ main {
 
 
 .footer p {
+  font-style: italic;
+  font-size: 30; /* Smaller font size for the footer text */
   margin: 5px 0;
   color: #323233; /* Reduce space between paragraphs for a tighter look */
   font-size: 32px; /* Increase font size for better visibility */
@@ -107,10 +121,12 @@ main {
 }
 
 .footer a {
+  font-size: 30; /* Smaller font size for links */
+  font-style: italic; /* Italics for a stylish look */
   color: #4b4a4a; /* Vibrant color for links */
   text-decoration: none; /* Remove underline from links */
   transition: all 0.3s ease; /* Smooth transition for hover effect */
-  font-weight: bold; /* Make links bold */
+  font-weight: bolder; /* Make links bold */
 }
 
 .footer a:hover, .footer a:focus {
@@ -135,6 +151,11 @@ main {
   align-items: center;
   margin: 20px;
 }
+
+/*------------------------------------
+* CARD  styling
+*-------------------------------------
+*/
 
 .card-container {
   display: grid;
@@ -165,7 +186,6 @@ main {
   padding-left: 30%;
 }
 
-/* Styling for each character entry */
 .character-entry {
   padding: 10px;
   margin: 5px 0;
@@ -187,6 +207,7 @@ main {
 
 /* Styling for the 'Load More' button */
 .load-more-btn:hover {
+  font-style: italic;
   background-color: #ff0b0b; /* Darker blue on hover */
 }
 
@@ -205,9 +226,10 @@ main {
 }
 /***/
 .load-more-btn {
-  padding: 10px 20px;
-  font-size: 16px;
-  color: white;
+  padding: 15px 60px;
+  font-size: 20px;
+  font-style: italic;
+  color: rgb(27, 8, 8);
   background-color: #7c7b7b; /* Bootstrap primary button color for familiarity */
   border: none;
   border-radius: 5px;
