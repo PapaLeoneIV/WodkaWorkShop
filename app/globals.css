@@ -5,11 +5,10 @@
 @tailwind components;
 @tailwind utilities;
 
-html {
-  font-size: 16px; /* Base font size for better readability */
-  display: contents;
+html { /* Base font size for better readability */
   background-color: #323233;
   height: 100%;
+  width: 100%;
   margin: 0;
   padding: 0;
 }
@@ -27,17 +26,10 @@ body {
 
 .header {
   display: flex; /* Flexbox for horizontal layout */
-  background-color: #323233; /* Dark background for the header */
-  color: #3f3b3b; /* Light text color */
   padding: 70px 30px; /* Increased padding around the header */
   display: flex; /* Make the header a flex container */
-  justify-content: space-between; /* Space between items */
+  justify-content: space-between; /* 
   align-items: center; /* Align items vertically */
-}
-
-.header nav {
-  text-align: center; /* Center the navigation bar */
-  flex-grow: 1; /* Allow the nav to take up available space */
 }
 
 .header .div {
@@ -51,45 +43,6 @@ body {
   align-items: center; /* Center the list items vertically */
 }
 
-.text_header {
-  text-decoration: double;
-  font-style: italic;
-  font-size: 24px; /* Larger font size for the header text */
-  font-weight: bolder; /* Bold font weight for emphasis */
-  margin: 0; /* Remove default margin */
-}
-
-.text_header :hover {
-  color: #6d6767;
-  text-decoration: double;
-  font-style: italic;
-  font-size: 24px; /* Larger font size for the header text */
-  font-weight: bolder; /* Bold font weight for emphasis */
-  margin: 0; /* Remove default margin */
-}
-
-.search_bar {
-  color: #3f3b3b;
-  padding: 10px 20px; /* Padding around the search bar */
-  border: 1px solid #ccc; /* Light grey border */
-  border-radius: 5px;
-  font-style: italic; /* Rounded corners */
-  font-size: 16px; /* Larger font size for better visibility */
-  margin-right: 10px; /* Space between search bar and button */
-}
-
-.square_button {
-  /* Additional styles for square_button if necessary */
-  border-radius: 45px;
-  background-color: #d35400;
-  padding: 40px 80px;
-  color: #fff;
-  font-size: 20px;
-  font-weight: bold;
-  text-transform: uppercase;
-  text-decoration: none;
-  transition: background-color 0.3s ease;
-}
 
 
 
@@ -99,111 +52,23 @@ body {
 */
 
 
-.footer {
-  background-color: #ff0b0b; /* Dark blue background */
-  color: #ecf0f1; /* Light gray text color for contrast */
-  text-align: center; /* Center-align the text */
-  padding: 20px 0; /* Padding above and below the text */
-  border-top: 5px solid #ff0b0b; /* A stylish separator */
-  flex: 0 0 auto; /* Prevent footer from growing */
-  margin-top: auto; /* Push the footer to the bottom */
-}
-
-
-.footer p {
-  font-style: italic;
-  font-size: 30; /* Smaller font size for the footer text */
-  margin: 5px 0;
-  color: #323233; /* Reduce space between paragraphs for a tighter look */
-  font-size: 32px; /* Increase font size for better visibility */
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; /* More modern font */
-  letter-spacing: 0.05em; /* Adding letter spacing for a premium feel */
-}
-
-.footer a {
-  font-size: 30; /* Smaller font size for links */
-  font-style: italic; /* Italics for a stylish look */
-  color: #4b4a4a; /* Vibrant color for links */
-  text-decoration: none; /* Remove underline from links */
-  transition: all 0.3s ease; /* Smooth transition for hover effect */
-  font-weight: bolder; /* Make links bold */
-}
-
-.footer a:hover, .footer a:focus {
-  color: #5e5a5a; /* Change color on hover for a nice visual effect */
-  text-decoration: underline; /* Underline on hover for emphasis */
-}
-
-.footer::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 3px;
-  background: linear-gradient(to right, #ff0b0b, #f39c12);
-  border-top: 1px solid #ecf0f1; /* Adding a subtle top line for more depth */
-}
-
-.body-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 20px;
-}
-
 /*------------------------------------
 * CARD  styling
 *-------------------------------------
 */
 
-.card-container {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr); /* Creates 4 columns */
-  gap: 20px; /* Space between cards */
-  width: 100%; /* Full width to contain the grid properly */
-  padding: 20px;
-}
 
-.character-card {
-  background-color: #fff; /* White background for the card */
-  border: 1px solid #ccc; /* Light grey border */
-  border-radius: 8px; /* Rounded corners */
-  padding: 15px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-}
 
-.card-title {
-  color: #333;
-  margin: 0 0 10px 0; 
-  padding-left: 30%;/* Space below the title */
-}
 
-.card-info {
-  color: #666;
-  margin: 15px 0; 
-  font-size: 14px;
-  padding-left: 30%;
-}
 
-.character-entry {
-  padding: 10px;
-  margin: 5px 0;
-  background-color: #646363; /* White background for each entry */
-  border: 1px solid #ccc; /* Subtle border for each entry */
-  border-radius: 5px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Soft shadow for depth */
-  font-family: Arial, sans-serif; /* Ensuring a consistent font */
-}
+
+
 .button-container {
   display: flex;
   justify-content: center; /* Center horizontally */
   align-items: center; /* Center vertically if needed */
   height: 100%; /* Take the full height of the parent if you also want vertical centering */
 }
-
-
-
 
 /* Styling for the 'Load More' button */
 .load-more-btn:hover {
@@ -216,26 +81,9 @@ body {
   cursor: not-allowed;
 }
 
-.card-image {
-  width: 85%; /* Adjust the width to less than full to allow for border visibility */
-  height: auto; /* Maintain aspect ratio */
-  margin: 10px auto; /* Center the image horizontally and add space around it */
-  border: 3px solid #ff0b0b; /* Red border for visibility and aesthetics */
-  border-radius: 10px; /* Rounded corners for the image */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15); /* Soft shadow for depth */
-}
+
 /***/
-.load-more-btn {
-  padding: 15px 60px;
-  font-size: 20px;
-  font-style: italic;
-  color: rgb(27, 8, 8);
-  background-color: #7c7b7b; /* Bootstrap primary button color for familiarity */
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
+
 
 @media (max-width: 768px) {
   .card-container {

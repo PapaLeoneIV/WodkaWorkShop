@@ -1,0 +1,49 @@
+.card_container {
+    display: grid; /* Grid layout for the cards */
+    grid-template-columns: repeat(4, 1fr); /* Creates 4 columns */
+    gap: 20px; /* Space between cards */
+    width: 100%; /* Full width to contain the grid properly */
+    padding: 20px; /* Rounded corners for the container */
+  }
+
+  .character_card {
+    background-color: #3ed880; /* White background for the card */
+    border: 1px solid #010B12; /* Light grey border */ 
+    border-width: 5px; 
+    border-radius: 8px; /* Rounded corners */
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  }
+
+  .card_image {
+    width: 85%; /* Adjust the width to less than full to allow for border visibility */
+    height: auto; /* Maintain aspect ratio */
+    margin: 10px auto; /* Center the image horizontally and add space around it */
+    border: 4px solid #010B12; /* Red border for visibility and aesthetics */
+    border-radius: 80px; /* Rounded corners for the image */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15); /* Soft shadow for depth */
+  }
+
+  .card_text{
+    color: #010B12; /* Black text color */
+    font-family: 'Arial', sans-serif; /* Font family for consistency */
+    font-size: 16px; /* Larger font size for better readability */
+    text-align: center; /* Center the text */ 
+  }
+
+  .card_title {
+    color: #010B12;
+    margin: 0 0 10px 0;
+    font-family: 'Courier New', Courier, monospace; 
+  /* Space below the title */
+  }
+
+  .card_info {
+    color: #323233;
+    margin: 15px 0; 
+    font-size: 14px;
+    font-family: 'Courier New', Courier, monospace;
+  }
+  
+  
+  /*vibrant green 3ed880*/

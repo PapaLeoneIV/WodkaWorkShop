@@ -1,9 +1,11 @@
 // Home.js
 "use client";
 import React, { useEffect, useState } from 'react';
+import { Html, Head, Main, NextScript } from 'next/document'
 import Header from "./components/header";  // Ensure correct casing if filesystem is case-sensitive
 import Footer from "./components/footer";
 import Body from "./components/body";
+import { title } from 'process';
 
 export default function Home() {
   const [page, setPage] = useState(1);
@@ -26,10 +28,10 @@ export default function Home() {
     };
  
   return (
-    <div>
+  <>
     <Header setSearchTerm={handleSearch} />
-      <Body filters={filters} />
-      <Footer />
-    </div>
-    );
+    <Body filters={filters} />
+    <Footer />
+  </>
+  );
 }

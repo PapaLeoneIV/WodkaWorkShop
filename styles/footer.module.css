@@ -1,0 +1,28 @@
+.footer {
+    background-color: #3ed880; /* Dark blue background */
+    padding: 1px 0; /* Padding above and below the text */
+    border-top: 3px solid #ffffff; /* A stylish separator */
+    flex: 0 0 auto; /* Prevent footer from growing */
+    margin-top: auto; /* Push the footer to the bottom */
+  }
+
+.text_container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1px;
+}
+
+.footer_text {
+    font-family: 'Arial', sans-serif;
+    font-size: 20px;
+    color: #333;    
+    text-align: center;
+    padding: 10px;
+    transition: color 0.3s ease;
+}
+
+.footer_text:hover {
+    color: #ffffff;
+    cursor: pointer;
+}

@@ -1,10 +1,11 @@
-import styles from './Footer.module.css';  // Assuming you are using CSS modules
+import styles from '@/styles/footer.module.css';  // Assuming you are using CSS modules
 
 function Footer() {
     return (
-      <footer className="footer">
-        <p>© 2023 My Website | <a href="/privacy-policy">Privacy Policy</a></p>
-        <p>Follow me on GitHub <a href="https://github.com/PapaLeoneIV">PapaLeoneIV</a></p>
+      <footer className={styles.footer}>
+        <div className={styles.text_container}>
+        <span className={styles.footer_text}>Follow me on GitHub <a href="https://github.com/PapaLeoneIV">PapaLeoneIV</a></span>
+        </div>
       </footer>
     );
   }
