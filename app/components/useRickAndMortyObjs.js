@@ -8,10 +8,14 @@ export default function useRickAndMortyObjs(page, filters) {
     const [hasMore, setHasMore] = useState(false);
     useEffect(() => {
         setLoading(true);
-        let url = new URL(`https://rickandmortyapi.com/api/character?page=${page}`);
+        let url;
+        
+        if (filters.name) // da implementare la ricerca per nome e la gestione delle carte ia caricate 
+            url = new URL(`https://rickandmortyapi.com/api/character?page=${page}&name=${filters.name}`);
+        else 
+            url = new URL(`https://rickandmortyapi.com/api/character?page=${page}`);
 
-        if (filters.name) // da implementare la ricerca per nome e la gestione delle carte gia caricate 
-            url = new URL(`https://rickandmortyapi.com/api/character?name=${filters.name}`);
+        
         fetch(url)
             .then(response => {
                 if (!response.ok) {

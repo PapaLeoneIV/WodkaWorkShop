@@ -4,6 +4,8 @@ import useRickAndMortyObjs from './useRickAndMortyObjs';  // Correct the import 
 import body_styles from '../../styles/body.module.css';  
 import card_styles from '../../styles/card.module.css';
 import lm_btn from '../../styles/load-more-btn.module.css';
+
+
 function Body({ filters }: { filters: any }) {  // Destructure 'filters' from props correctly  // Ensure this logs changes correctly by listing 'filters' as a dependency
     const [page, setPage] = useState(1);
     const { datax, loading, hasMore } = useRickAndMortyObjs(page, filters);
