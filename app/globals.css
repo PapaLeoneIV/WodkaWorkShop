@@ -5,17 +5,34 @@
 @tailwind components;
 @tailwind utilities;
 
-html { /* Base font size for better readability */
-  background-color: #323233;
-  height: 100%;
-  width: 100%;
-  margin: 0;
-  padding: 0;
-}
 
 body {
+
   display: flex;
+  background-color: #323233;
   flex-direction: column; /* Stack verticalmente */
+}
+
+button {
+  /* Variables */
+--button_radius: 0.75em;
+--button_color: #e8e8e8;
+--button_outline_color: #000000;
+font-size: 17px;
+font-weight: bold;
+border: none;
+border-radius: var(--button_radius);
+background: var(--button_outline_color);
+}
+
+button:hover .button_top {
+  /* Pull the button upwards when hovered */
+transform: translateY(-0.33em);
+}
+
+button:active .button_top {
+  /* Push the button downwards when pressed */
+transform: translateY(0);
 }
 
 /*------------------------------------

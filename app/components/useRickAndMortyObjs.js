@@ -2,18 +2,18 @@
 "use client";
 import { useState, useEffect } from 'react';
 
-export default function useRickAndMortyObjs(page, filters) {
+export default function useRickAndMortyObjs(page, filters, setPage) {
     const [datax, setDatax] = useState([]);
     const [loading, setLoading] = useState(false);
     const [hasMore, setHasMore] = useState(false);
     useEffect(() => {
         setLoading(true);
-        let url;
-        
+        const baseUrl = `https://rickandmortyapi.com/api/character`
+        let url = new URL(baseUrl);
+        if (filters.name == null )
+            url.searchParams.append("page", page);
         if (filters.name) // da implementare la ricerca per nome e la gestione delle carte ia caricate 
             url = new URL(`https://rickandmortyapi.com/api/character?page=${page}&name=${filters.name}`);
-        else 
-            url = new URL(`https://rickandmortyapi.com/api/character?page=${page}`);
 
         
         fetch(url)
@@ -34,6 +34,12 @@ export default function useRickAndMortyObjs(page, filters) {
                 setLoading(false);
             });
     }, [page, filters]); // Re-run the effect when 'page' or 'filters' change
+
+    useEffect(() => {
+        if (filters.name === '') {
+            setPage(1); // Reset to the first page
+        }
+    }, [filters.name, setPage]);    
 
     return { datax, loading, hasMore };
 }
