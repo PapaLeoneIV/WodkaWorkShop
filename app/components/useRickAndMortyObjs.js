@@ -17,7 +17,7 @@ export default function useRickAndMortyObjs(page, filters, setPage) {
 
         
         fetch(url)
-            .then(response => {
+        .then(response => {
                 if (!response.ok) {
                     throw new Error('Network response was not ok');
                     
@@ -43,3 +43,5 @@ export default function useRickAndMortyObjs(page, filters, setPage) {
 
     return { datax, loading, hasMore };
 }
+
+
